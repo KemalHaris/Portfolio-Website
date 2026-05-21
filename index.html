@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,600;1,9..144,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ░░ LOADER ░░ -->
+  <div id="loader">
+    <div class="ld-inner">
+      <p class="ld-label">Loading</p>
+      <div class="ld-bar"><div class="ld-fill"></div></div>
+      <p class="ld-name">Portfolio<em>.</em></p>
+    </div>
+  </div>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div id="cur" class="cur"></div>
+  <div id="cur2" class="cur2"></div>
+
+  <!-- ░░ ZOOM LIGHTBOX ░░ -->
+  <div id="zoomBox" role="dialog" aria-modal="true" aria-label="Zoom view">
+    <button id="zoomClose" aria-label="Close zoom">&#x2715;</button>
+    <div id="zoomContent">
+      <div class="zoom-img-wrap">
+        <!-- real image if available -->
+        <img id="zoomImg" src="" alt="" />
+        <div class="zoom-ph" id="zoomPh"></div>
+      </div>
+      <div class="zoom-info">
+        <span class="zoom-type" id="zoomType"></span>
+        <h2 class="zoom-title" id="zoomTitle"></h2>
+        <p class="zoom-desc" id="zoomDesc"></p>
+        <div class="zoom-tags" id="zoomTags"></div>
+        <a href="#" class="zoom-link" id="zoomLink" target="_blank" rel="noopener">View full work →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header id="nav">
+    <div class="nav-wrap">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-dot"></span>Muhammad Kemal Haris
+      </a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#infographics">Infographics</a>
+        <a href="#magazines">Magazine</a>
+        <a href="#posters">Posters</a>
+        <a href="#websites">Websites</a>
+        <a href="https://wa.me/6282110569757" class="nav-pill">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-wrap">
+
+      <!-- left col -->
+      <div class="hero-left">
+        <span class="tag reveal">Selected Works — 2024</span>
+        <h1 class="hero-h reveal d1">
+          Welcome<br>to my<br><em>portfolio.</em>
+        </h1>
+        <p class="hero-body reveal d2">
+          A curated collection spanning data visualisation,
+          editorial design, print, and digital experiences.
+        </p>
+        <a href="#infographics" class="btn reveal d3">
+          Explore work <span>↓</span>
+        </a>
+      </div>
+
+      <!-- right col -->
+      <div class="hero-right">
+
+        <!-- photo -->
+        <div class="hero-card reveal d1">
+          <div class="hero-photo-wrap" id="heroPhotoWrap">
+            <img
+              src="E:\random projects\portfolio\imgfotocv.jpg"
+              alt="Kemal's Pic"
+              class="hero-photo"
+              id="heroPhoto"
+            />
+          </div>
+
+          <div class="hero-bio">
+            <p class="bio-line">Visual Communication and Design student at Telkom University Purwokerto with experience in several graphic design software, digital media production, and front-end web development.</p>
+            <p class="bio-line">Able to bridge visual design with practical implementation through hands-on experience in creative and organizational environments.</p>
+            <p class="bio-line">Passionate about applying academic knowledge and personal project experience in a professional design environment.</p>
+          </div>
+        </div>
+
+        <!-- stats row -->
+        <div class="hero-stats reveal d2">
+          <div class="stat"><strong>2</strong><span>Infographics</span></div>
+          <div class="stat"><strong>2</strong><span>Magazines</span></div>
+          <div class="stat"><strong>3</strong><span>Posters</span></div>
+          <div class="stat"><strong>2</strong><span>Websites</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ticker -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>INFOGRAPHICS</span><i>✦</i>
+        <span>MAGAZINE</span><i>✦</i>
+        <span>POSTERS</span><i>✦</i>
+        <span>WEBSITES</span><i>✦</i>
+        <span>DESIGN</span><i>✦</i>
+        <span>INFOGRAPHICS</span><i>✦</i>
+        <span>MAGAZINE</span><i>✦</i>
+        <span>POSTERS</span><i>✦</i>
+        <span>WEBSITES</span><i>✦</i>
+        <span>DESIGN</span><i>✦</i>
+        <span>INFOGRAPHICS</span><i>✦</i>
+        <span>MAGAZINE</span><i>✦</i>
+        <span>POSTERS</span><i>✦</i>
+        <span>WEBSITES</span><i>✦</i>
+        <span>DESIGN</span><i>✦</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOGRAPHICS -->
+  <section id="infographics" class="section">
+    <div class="sec-head">
+      <div class="sec-num">01</div>
+      <div class="sec-meta">
+        <h2 class="sec-title">Infographics</h2>
+        <p class="sec-sub">A collection of infographics works</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- infographic 1 -->
+      <div class="card zoomable reveal"
+        data-href="2ijabataldu3a.jpg"
+        data-type="Infographic"
+        data-title="The Reasons for an Accepted Prayer"
+        data-desc="A detailed visual breakdown of the reasons for an accepted prayers."
+        data-tags="Data Visualization,Editorial"
+        data-img="2ijabataldu3a.jpg">
+        <div class="card-img-wrap">
+          <img src="2ijabataldu3a.jpg" alt="Infographic 1" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Infographic</span>
+            <span class="ch-title">The Reasons for an Accepted Prayer</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">The Reasons for an Accepted Prayer</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">INFO</span>
+        </div>
+      </div>
+
+      <!-- infographic 2 -->
+      <div class="card zoomable reveal"
+        data-href="propheticremedies.jpg"
+        data-type="Infographic"
+        data-title="The Famous Prophetic Remedies"
+        data-desc="Another infographic exploring the remedies used during the time of the prophet PBUH."
+        data-tags="Data Visualization,Editorial"
+        data-img="propheticremedies.jpg">
+        <div class="card-img-wrap">
+          <img src="propheticremedies.jpg" alt="Infographic 2" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Infographic</span>
+            <span class="ch-title">The Famous Prophetic Remedies</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">The Famous Prophetic Remedies</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">INFO</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAGAZINES -->
+  <section id="magazines" class="section">
+    <div class="sec-head">
+      <div class="sec-num">02</div>
+      <div class="sec-meta">
+        <h2 class="sec-title">Magazine</h2>
+        <p class="sec-sub">A collection of magazine cover works</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- magazine 1 -->
+      <div class="card zoomable reveal"
+        data-href="business.jpg"
+        data-type="Magazine"
+        data-title="Business Magazine"
+        data-desc="Art direction and full layout design for an old assignment themed around magazine covers."
+        data-tags="Editorial,Art Direction,Typography"
+        data-img="business.jpg">
+        <div class="card-img-wrap">
+          <img src="business.jpg" alt="Magazine 1" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Magazine</span>
+            <span class="ch-title">Business Magazine</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">Business Magazine</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">MAG</span>
+        </div>
+      </div>
+
+      <!-- magazine 2 -->
+      <div class="card zoomable reveal"
+        data-href="mahjong.png"
+        data-type="Magazine"
+        data-title="Mahjong Magazine"
+        data-desc="Art direction and full layout design for an old assignment themed around magazine covers."
+        data-tags="Editorial,Art Direction,Typography"
+        data-img="mahjong.png">
+        <div class="card-img-wrap">
+          <img src="mahjong.png" alt="Magazine 2" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Magazine</span>
+            <span class="ch-title">Mahjong Magazine</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">Mahjong Magazine</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">MAG</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POSTERS -->
+  <section id="posters" class="section">
+    <div class="sec-head">
+      <div class="sec-num">03</div>
+      <div class="sec-meta">
+        <h2 class="sec-title">Posters</h2>
+        <p class="sec-sub">A collection of posters works</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+
+      <!-- poster 1 -->
+      <div class="card zoomable reveal"
+        data-href="elegy.jpg"
+        data-type="Poster"
+        data-title="The Elegy of the Martyrs"
+        data-desc="The dead depart as bodies, yet return as wings carried by grief and memory."
+        data-tags="Print,Poster"
+        data-img="elegy.jpg">
+        <div class="card-img-wrap poster-img">
+          <img src="elegy.jpg" alt="Poster 1" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Poster</span>
+            <span class="ch-title">The Elegy of the Martyrs</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">The Elegy of the Martyrs</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">PRINT</span>
+        </div>
+      </div>
+
+      <!-- poster 2 -->
+      <div class="card zoomable reveal"
+        data-href="light.jpg"
+        data-type="Poster"
+        data-title="The Procession of Light"
+        data-desc="Through dust, steel, and fading horizons, the caravan moves beneath a sacred glow."
+        data-tags="Print,Poster"
+        data-img="light.jpg">
+        <div class="card-img-wrap poster-img">
+          <img src="light.jpg" alt="Poster 2" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Poster</span>
+            <span class="ch-title">The Procession of Light</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">The Procession of Light</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">PRINT</span>
+        </div>
+      </div>
+
+      <!-- poster 3 -->
+      <div class="card zoomable reveal"
+        data-href="prisoners.jpg"
+        data-type="Poster"
+        data-title="The Voices of the Prisoners."
+        data-desc="Even behind iron and silence, the chained still raise their hands toward the sky."
+        data-tags="Print,Poster"
+        data-img="prisoners.jpg">
+        <div class="card-img-wrap poster-img">
+          <img src="prisoners.jpg" alt="Poster 3" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph"></div>
+          <div class="card-hover">
+            <span class="ch-type">Poster</span>
+            <span class="ch-title">The Voices of the Prisoners</span>
+            <span class="ch-hint">Click to zoom</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">The Voices of the Prisoners</p>
+            <p class="card-yr">2023</p>
+          </div>
+          <span class="badge">PRINT</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WEBSITES -->
+  <section id="websites" class="section">
+    <div class="sec-head">
+      <div class="sec-num">04</div>
+      <div class="sec-meta">
+        <h2 class="sec-title">Website</h2>
+        <p class="sec-sub">A collection of Websites works</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- WEBSITE 1 -->
+      <a class="card web-card reveal"
+        href="https://kemalharis.github.io/Schedule-Maker/"
+        target="_blank" rel="noopener"
+        data-type="Website"
+        data-title="Schedula">
+        <p class="web-label">An amateur schedule making website for a college project.</p>
+        <div class="card-img-wrap web-img">
+          <img src="SchedulaCover.png" alt="Website 1" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph web-ph">
+            <span>[ Website Screenshot ]</span>
+          </div>
+          <div class="card-hover">
+            <span class="ch-type">Website</span>
+            <span class="ch-title">Schedula</span>
+            <span class="ch-hint">Visit site →</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">Schedula</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">WEB</span>
+        </div>
+      </a>
+
+      <!-- Website 2 -->
+      <a class="card web-card reveal"
+        href="https://kemalharis.github.io/Kebangkitan_Marxisme"
+        target="_blank" rel="noopener"
+        data-type="Website"
+        data-title="Kebangkitan Marxisme">
+        <p class="web-label">A website detailing the history of marxism for a college project.</p>
+        <div class="card-img-wrap web-img">
+          <img src="MarxismCover.png" alt="Website 2" class="card-img" onerror="this.style.opacity=0" />
+          <div class="card-ph web-ph">
+            <span>[ Website Screenshot ]</span>
+          </div>
+          <div class="card-hover">
+            <span class="ch-type">Website</span>
+            <span class="ch-title">Kebangkitan Marxisme</span>
+            <span class="ch-hint">Visit site →</span>
+          </div>
+        </div>
+        <div class="card-foot">
+          <div>
+            <p class="card-name">Kebangkitan Marxisme</p>
+            <p class="card-yr">2024</p>
+          </div>
+          <span class="badge">WEB</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- footer/contact -->
+  <footer id="contact">
+    <div class="foot-inner">
+      <div class="foot-left">
+        <span class="tag light">Get in touch</span>
+        <h2 class="foot-h">Let's work<br><em>together.</em></h2>
+        <a href="mailto:kemalharis650@gmail.com" class="foot-email" id="footEmail">
+          kemalharis650@gmail.com
+        </a>
+      </div>
+      <div class="foot-right">
+        <div class="foot-col">
+          <p class="foot-col-label">Navigate</p>
+          <a href="#infographics">Infographics</a>
+          <a href="#magazines">Magazine</a>
+          <a href="#posters">Posters</a>
+          <a href="#websites">Websites</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-col-label">Contacts</p>
+          <!-- ★ Replace # with your actual social links -->
+          <a href="https://www.instagram.com/ghurabaharis/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/Lebensauger308" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/6282110569757" target="_blank" rel="noopener">Whatsapp</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>© 2024 Muhammad Kemal Haris — All rights reserved</span>
+      <a href="#hero" class="totop">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
